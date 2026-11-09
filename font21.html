@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            font-family: Arial;
+        }
+        .c
+        {
+            font-family: 'Times New Roman', Times, serif ;
+        }
+    </style>
+
+    <script>
+
+        function cng()
+        {
+            let cc = document.getElementById("h");
+            let classs = document.getElementById("fon");
+
+            cc.addEventListener("click", function()
+        {
+            classs.classList.toggle("c");
+        })
+        }
+    </script>
+</head>
+
+<body>
+
+    <center>
+        <h1 id="fon" class="b">
+            Font Changes On Click
+        </h1>
+        <button  id="h" onclick="cng()"> Change </button>
+    </center>
+
+
+    
+</body>
+</html>

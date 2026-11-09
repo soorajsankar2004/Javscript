@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="hh">HTML WEBSITE</h1>
+    <input type="button" value="hide/show" id="j">
+
+    <script>
+        var b = document.getElementById("hh");
+        var c = document.getElementById("j");
+
+        c.addEventListener("click", function () {
+            b.classList.toggle("hide");
+        });
+    </script>
+
+</body>
+</html>

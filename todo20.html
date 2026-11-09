@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add()
+        {
+        var inp =document.getElementById("dos");
+        var lst = document.getElementById("dolst");
+
+        if( inp.value.trim() == "")
+        {
+            alert("enter text !!");
+            return;
+        }
+
+        let li = document.createElement("li");
+
+        li.textContent = inp.value;
+
+        lst.appendChild(li);
+        inp.value="";
+
+        }
+
+        function rem()
+        {
+             let lst = document.getElementById("dolst");
+
+             if(lst.lastElementChild)
+             {
+                lst.removeChild(lst.lastElementChild);
+             }
+             else
+             {
+                alert("list empty");
+             }
+        }
+
+    </script>
+</head>
+<body>
+    <center>
+        add item : <input type="text" id="dos">
+        <button onclick="add()">add</button>
+        <br><br><button onclick="rem()">Remove</button>
+        <h1>TO DO LIST</h1>
+        <hr>
+        <div style="width:25%;">
+        <ul id="dolst" style="list-style:decimal; "></ul>
+        </div>
+    </center>
+</body>
+</html>

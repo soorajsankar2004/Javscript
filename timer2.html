@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><center>
+    <input type="button" id="bb" value="count down" style="margin-top: 30px; background-color: aqua; border: 0; border-radius: 5px; padding: 8px; color:red; font-weight: bold ;cursor: pointer; " onclick="timedown()" id="w">
+    <p id="hh" style="font-size: 40px; font-weight: bold;"></p>
+    </center>
+    <script>
+        function timedown()
+        {
+         let time = 30;
+        let timer = setInterval(function (){
+        let f =1;
+        time -= 1;
+        document.getElementById("hh").innerHTML = time+1;
+        if(time == 0)
+        {
+        document.getElementById("hh").innerHTML = "Hurryy!!!!!";
+        document.getElementById("bb").remove();
+        clearInterval(timer);
+        }
+        },1000)
+        }
+    </script>
+</body>
+</html>

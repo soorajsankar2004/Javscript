@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sohow()
+        {
+        var b = document.getElementById("mm").value;
+        document.getElementById("ww").textContent = `${b}`;
+        }
+    </script>
+</head>
+<body>
+    <form name="bb"></form>
+
+    Enter your text :  <input type="text" name="tt" id="mm">  <br><br>
+    <input type="button" onclick="sohow()" value = "show" >
+    <br><br>
+    <h1 id="ww"></h1>
+</form>
+</body>
+</html>

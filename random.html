@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .h{
+        margin: 5px;
+        width: 70px;
+     }
+     .i{
+        margin-left: 150px;
+        margin-top: 10px;
+        height: 30px;
+        width: 30px;
+     }
+
+    </style>
+    <script>
+        function getrand()
+        {
+            var min = Number(document.getElementById("min").value);
+            var max = Number(document.getElementById("max").value);
+            var ran = Math.floor(Math.random()*(max-min)+min);
+            document.getElementById("randoo").value=ran;
+        }
+    </script>
+</head>
+<body>
+    Enter range : <input type="text" class="h" id="min" placeholder="minimum"> <input type="text" class ="h" placeholder="maximun" id="max">
+    <input type="button" value="get num" onclick="getrand()"><br><input class="i" type="text" id="randoo">
+    
+</body>
+</html>

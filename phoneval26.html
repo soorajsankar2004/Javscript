@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check()
+        {
+            var num = document.getElementById("p").value;
+            let pat =/^[0-9]{10,}$/
+
+            if(pat.test(num))
+        {
+            alert("Valid Number ..");
+            return;
+        }
+        else
+        {
+            alert("Invalid Number!!");
+        }
+        }
+    </script>
+</head>
+<body>
+    <center> 
+        Enter your phone number : <input id="p" type="text">
+        <br><br><button onclick="check()">check</button>
+    </center>
+</body>
+</html>

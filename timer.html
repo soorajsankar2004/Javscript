@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hhh{
+            font-size: 40px;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Timer</h1>
+
+        <p id="hhh"></p>
+
+        <script>
+            var counttill = new Date("march 5 ,2026 13:45:00").getTime();
+            var x = setInterval(function() {
+            var now = new Date().getTime();
+            var f = counttill - now
+            let d = Math.floor(f/(1000*60*60*24));
+            let h = Math.floor((f%(1000*60*60*24))/(1000*60*60));
+            let m = Math.floor((f%(1000*60*60))/(1000*60));
+            let s =  Math.floor((f%(1000*60))/(1000));
+            document.getElementById("hhh").innerHTML = d+"D "+h+"H "+m+"M "+s+"S ";
+            },1000);
+        </script>
+    </center>
+    
+    
+</body>
+</html>

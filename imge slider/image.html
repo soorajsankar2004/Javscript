@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .col
+        {
+            width: 97%;
+            background-color: white ;
+            padding: 10px;
+        }
+        .imgs{
+            width: 100%;
+        }
+        .btn{
+            margin-top: 20px;
+            border-radius:5px ;
+            border: 0;
+            background-color: yellow;
+            font-weight: bold;
+            color: black;
+            padding: 7px;
+        }
+        .btn:hover{
+            opacity: 50%;
+        }
+    </style>
+    <script>
+        let list =["1.jpg","2.jpg","3.jpg","4.jpg",
+                    "5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"];
+                    let index=-1;
+                    function cng()
+                    {
+                        index++;
+                        if(index >= list.length)
+                    {
+                        index = 0;
+                    }
+
+                    document.getElementById("slider").src = list[index];
+
+                    }
+    </script>
+</head>
+<body bgcolor="green">
+    <div class="col">
+        <img class="imgs" id="slider" src="2.jpg" alt="">
+    </div>
+    <center>
+    <button class="btn" onclick="cng()">view next</button>
+    </center>
+    
+</body>
+</html>

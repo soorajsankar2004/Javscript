@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sendMessage()
+        {
+            let msg = document.getElementById("mess").value;
+            if(msg.trim() == "") return;
+            let msgbox = document.createElement("div");
+            msgbox.className = "mymsg";
+            msgbox.innerHTML = msg;
+            document.querySelector(".cArea").appendChild(msgbox);
+            setTimeout(function(){
+                chatreplay(msg);
+            },500)
+            document.getElementById("mess").value = "";
+        }
+
+        function chatreplay(msg)
+        {
+            let rem;
+            let replybox = document.createElement("div");
+            replybox.className= "remsg";
+            msg = msg.toLowerCase();
+            if(msg == "hello" || msg == "hi" ){
+                rem = "Hi! How can i help you today.";
+            }
+            else if(msg=="how are you")
+            {
+                rem = "i am fine ! hope you are fine!!.";
+            }
+            else
+            {
+                rem = "sorry !! i could'nt Understand."
+            }
+            replybox.innerHTML = rem;
+            document.querySelector(".cArea").appendChild(replybox);
+            rem = "";
+        }
+
+
+    </script>
+    <style>
+        .mymsg{
+            background-color: #d4f8d4; /* light green */
+            padding: 8px 12px;
+            border-radius: 10px;
+            margin: 10px;
+            width: fit-content;
+            max-width: 60%;
+            margin-left: auto; /* pushes message to right */
+            text-align: right;
+        }
+        .chat{
+            background-color: aquamarine;
+            width: 350px;
+            height: 90vh;
+            border-radius: 10px;
+        }
+        .header
+        {
+            background-color: rgba(156, 85, 85, 0.853);
+            width: 100%;
+            height:60px;
+            border-radius: 10px 10px  0px 0px;
+            display: flex;
+        }
+        .img
+        {
+            height: 70%;
+            border-radius: 50px;
+            margin-top: 8px ;
+            margin-left:10px ;
+        }
+        .cArea{
+            background-image: url("bg.jpg");
+            width: 100%;
+            height: 74vh;
+            overflow-y: auto;
+            align-content: flex-start;
+         }
+        .message{
+            margin-top: 10px;
+            position: absolute;
+            margin-left: -160px;
+            padding: 5.1px;
+            border-radius: 10px;
+            border: 0;
+            width: 40%;
+            
+        }
+        .btn
+        {
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            margin-top: 10px;
+            border: 0;
+            border-radius: 0 10px 10px 0;
+            height: 27px;
+            margin-left: 80px;
+            width: 80px;
+            background-color: black;
+        }
+        .msgsec{
+            background-color: rgba(156, 85, 85, 0.853);
+            width: 100%;
+            height: 51px;
+            border-radius: 0 0 10px 10px;
+        }
+        .remsg{
+            background-color: white;
+            width: fit-content;
+            padding: 5px 8px;
+            border-radius: 10px;
+            margin: 5px;
+            margin-right: auto;
+            max-width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="chat">
+        <div class="header">
+            <img class="img" src="chat.avif">
+            <p style="color: aliceblue; font-weight: bold; margin-left: 7px; margin-top: 15px;">Chatbot </p>
+            <p style="position: absolute; color: greenyellow; font-size: 50px; margin-top: -2px; margin-left: 57px;">.</p>
+            <p style="position:absolute; font-size: 13px; color: aliceblue; margin-left: 68px; margin-top: 33px;">online</p>
+        </div>
+        <div class="cArea"  >
+            <p style="background: linear-gradient(rgba(0,0,0,0.5)50%); color: white;">Hi there! <br> Welcome to our chat 😊<br>How can I assist you today?</p>
+        </div>
+        <div class="msgsec">
+            <input class="message" type="text" placeholder="Enter your text" id="mess">
+            <button class="btn" onclick="sendMessage()" id="snt">send</button>
+        </div>
+    </div>
+    </center>
+</body>
+</html>

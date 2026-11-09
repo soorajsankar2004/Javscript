@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator </title>
+    <style>
+        .bro{
+            width: 220px;
+            padding: 5px;
+            background-color: black;
+            border-radius: 5px;
+        }
+        .txt{
+            width: 212px;
+            height: 40px;
+            margin-bottom: 3px;
+            border-radius: 5px;
+        }
+        .btn{
+            width: 50px;
+            margin: 1px;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        .btn:hover{
+            cursor: pointer;
+            opacity: 50%;
+        }
+    </style>
+
+    <script>
+        function appnum(num)
+        {
+            document.getElementById("result").value += num;
+        }
+        function opp(op)
+        {
+            document.getElementById("result").value += op; 
+        }
+        function claculate()
+        {
+            let exp = document.getElementById("result").value;
+
+            let numbrs = exp.split(/[+,-,*,/]/).map(Number);
+
+            let opps = exp.replace(/[0-9.]/g,"");
+
+            let total = numbrs[0];
+            for(let i=0;i<opps.length;i++){
+
+                if (opps[i] === "+") total += numbrs[i+1];
+                if (opps[i] === "-") total -= numbrs[i+1];
+                if (opps[i] === "*") total *= numbrs[i+1];
+                if (opps[i] === "/") total /= numbrs[i+1];
+        }
+        result.value = total;
+        }
+
+    </script>
+</head>
+<body>
+    <center>
+    <div class="bro" >
+        <input class="txt" type="text" id="result">
+        <input class="btn" onclick="appnum('1')" type="button" value="1" id="1">
+        <input class="btn" onclick="appnum('2')" type="button" value="2" id="2">
+        <input class="btn" onclick="appnum('3')" type="button" value="3" id="3">
+        <input class="btn" onclick="opp('+')" type="button" value="+" id="+">
+        <input class="btn" onclick="appnum('4')" type="button" value="4" id="4">
+        <input class="btn" onclick="appnum('5')" type="button" value="5" id="5">
+        <input class="btn" onclick="appnum('6')" type="button" value="6" id="6">
+        <input class="btn" onclick="opp('-')"  type="button" value="-" id="-">
+        <input class="btn" onclick="appnum('7')" type="button" value="7" id="7">
+        <input class="btn" onclick="appnum('8')" type="button" value="8" id="8">
+        <input class="btn" onclick="appnum('9')" type="button" value="9" id="9">
+        <input class="btn" onclick="opp('*')"  type="button" value="*" id="*">
+        <input class="btn" onclick="opp('/')"  type="button" value="/" id="/">
+        <input class="btn" onclick="appnum('0')" type="button" value="0" id="0">
+        <input class="btn" onclick="result.value=''" type="button" value="clr" id="clr">
+        <input class="btn" onclick="claculate()" type="button" value="=" id="=">
+    </div>
+    </center>
+    
+</body>
+</html>

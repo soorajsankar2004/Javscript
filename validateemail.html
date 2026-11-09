@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            let email = document.getElementById("em").value;
+            let pattern = /^([a-zA-z0-9._]+)@([a-z0-9]+).([a-z]+)([a-z]{2,})$/;
+            if(pattern.test(email))
+        {
+            document.writeln("submitted");
+            return true;
+            
+        }
+        else
+        {
+            alert("invalid email used");
+            return false;
+        }
+        }
+    </script>
+</head>
+<body>
+    Enter your email :  <input type="text" id="em" placeholder="Email">  <button onclick="validate()" >submit</button>
+    
+</body>
+</html>

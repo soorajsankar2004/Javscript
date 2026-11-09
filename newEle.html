@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add()
+        {
+            var inp = document.getElementById("text");
+            var lst = document.getElementById("itemlst");
+
+            if(inp.value.trim() === "")
+            {
+            alert("enter a value");
+            return;
+            }
+
+            const li = document.createElement("li");
+            li.textContent = inp.value;
+
+            lst.appendChild(li);
+            inp.value = "";
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <input type="text" id="text" placeholder="enter the element">
+        <button onclick="add()">Add</button>
+        <h1>Items list</h1>
+        <ul id="itemlst"></ul>
+    </center>
+</body>
+</html>

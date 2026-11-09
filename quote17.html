@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = next;
+        let index = 0;
+        function next()
+        {
+            let quotes = ["Start before you’re ready. Growth begins in action.",
+
+                            "Discipline will take you places motivation never could.",
+
+                            "Small progress every day is still progress.",
+
+                            "Your future is created by what you do today.",
+
+                            "Don’t wait for opportunity. Build it.",
+
+                            "Focus on the goal, not the noise.",
+
+                            "Consistency beats talent when talent quits.",
+
+                            "The pain of discipline is lighter than the pain of regret.",
+
+                            "You don’t need more time. You need more focus.",
+
+                            "Level up quietly. Let success make the noise."];
+            
+            document.getElementById("qutt").innerHTML = quotes[index];
+            index++;
+            if(index==quotes.length)
+        {
+            index=0;
+        }   
+    }
+    </script>
+</head>
+<body bgcolor="black">
+    <center>
+    <div id="qut" style="width: 100%; padding: 10px;
+    background-color: white; border-radius: 10px; 
+    height: 50px ;">
+    
+    <p id="qutt" style="font-weight: bold; 
+    font-style: italic; 
+    text-shadow: 2px 2px 5px rgb(222, 11, 11); 
+    " ></p>
+    </div>
+    <button onclick="next()" style="margin-top: 10px; 
+    border-radius: 5px; font-weight: bold; 
+    color: white; background-color: black; border-color: white;">Next</button>
+    </center>
+</body>
+</html>

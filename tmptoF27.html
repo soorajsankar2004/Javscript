@@ -1,0 +1,30 @@
+<!-- Fahrenheit = (Celsius * 1.8) + 32 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function find()
+        {
+            var temp = Number(document.getElementById("tem").value);
+            
+            var fahren =(temp*1.8)+32;
+
+            document.getElementById("fah").innerHTML = "Fahrenheit = "+fahren+"<sup>o</sup>F";
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <H1>Temperature -- Fahrenheit </H1>
+        <p>Enter the Temperature (<sup>o</sup>C ) : 
+        <input style="width: 40px;" id="tem" type="text"></p>
+        <button onclick="find()">Find</button>
+        <h2 id="fah"></h2>
+    </center>
+</body>
+</html>

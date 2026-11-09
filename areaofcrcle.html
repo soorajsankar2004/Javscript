@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Area()
+    {
+        const pi = 22/7;
+        
+
+        let R = Number(document.getElementById("rad").value);
+        let A = pi*R*R;
+        document.getElementById("area").value = A;
+    }
+</script>
+<body>
+    <center>
+        <h1>Area of Circle </h1>
+   Enter the radius : <input type="number"  id="rad"><br><br>
+   Area : <input type="number" id="area">
+   <br><br><button onclick="Area()">Find</button>
+    </center>
+</body>
+</html>

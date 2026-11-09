@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function show()
+    {
+        
+        document.getElementById("drop").classList.toggle("b");
+        
+    }
+</script>
+<style>
+    .down{
+        display: none;
+    }
+    .h{
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .b
+    {
+        display: block;
+    }
+</style>
+<body bgcolor="#fff7000">
+    <center>
+    <button id="bb" style="border-radius: 5px; border: 0;
+    font-weight: bold; padding: 5px 8px;
+    background-color: rgb(16, 249, 249);"
+    onclick="show()">dropdown Menu</button>
+
+    <div id="drop" class="down" 
+    style="background-color: white;
+     width: 300px; margin: 10px; border-radius: 5px; padding: 2px 0px;">
+        <p><a href="#" class="h">PARKING </a></p>
+        <hr>
+        <p><a href="#" class="h">BARKING </a></p>
+        <hr>
+        <p><a href="#" class="h">MARKING </a></p>
+        <hr>
+        <p><a href="#" class="h">ARKING </a></p>
+        <hr>
+        <p><a href="#" class="h">PARKING </a></p>
+        <hr>
+        <p><a href="#" class="h">PARKING </a></p>
+        
+        
+    </div>
+</body>
+</html>
